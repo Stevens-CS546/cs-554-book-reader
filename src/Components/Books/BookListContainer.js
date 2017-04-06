@@ -7,7 +7,7 @@ class BookListContainer extends Component {
         super(props);
 
         this.state = {
-            bookList: []
+            bookList: undefined
         };
     }
 
@@ -20,7 +20,7 @@ class BookListContainer extends Component {
     }
 
     render() {
-        if (this.state.bookList.length === 0) return <div>Loading...</div>;
+        if (this.state.bookList === undefined) return <div>Loading...</div>;
 
         return <BookList books={this.state.bookList} />
     }
